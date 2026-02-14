@@ -20,9 +20,9 @@ Planning
 
 ## Next Action (<30m)
 
-Initialize git repository at NORI root and create .gitignore
+Begin using NORI daily (run `/Projects daily` each morning)
 
-**Why this matters:** Version control enables tracking all changes, supports rollback if needed, and provides audit trail for NORI evolution.
+**Why this matters:** Real-world usage will validate workflows, identify friction points, and build muscle memory with the command system.
 
 ---
 
@@ -73,11 +73,14 @@ L
 ✅ Legacy projects wrapped (ATAS, Certification-Center, KinderGuard)
 ✅ NORI-Project-OS self-instance created (dogfooding)
 
-### Testing Phase (60% Complete)
-✅ Tested 6/10 core `/Projects` commands successfully
+### Testing Phase (100% Complete)
+✅ Tested all 10/10 core `/Projects` commands successfully
 ✅ `/Projects daily` - Energy-based recommendations verified
 ✅ `/Projects validate` - System health checks passed (all OK)
+✅ `/Projects idea add` + `/Projects idea list` - Idea management validated
+✅ `/Projects new` + `/Projects archive` - Full lifecycle tested
 ✅ Confirmed all 4 projects properly scaffolded and compliant
+✅ Archive-not-delete policy validated through test project
 
 ---
 
@@ -94,7 +97,7 @@ L
 
 This is NORI managing itself (dogfooding approach). Bootstrap initialization is 100% complete. System validated with OK status.
 
-**Current Focus:** Priority #2 - Setting up version control (git) to enable change tracking and rollback capabilities. Command testing 60% complete (6/10), sufficient to validate core functionality.
+**Current Focus:** Priority #3 - Begin daily NORI usage (dogfooding). Command testing 100% complete (10/10). Git already configured and operational. System ready for production use.
 
 ---
 

@@ -29,8 +29,7 @@ This is the canonical registry of all projects under NORI Project OS.
 | ATAS | atas | active | Discovery | 2026-02-13 | Review MARC/ folder structure | M | 1 | Y |
 | Certification Center | certification-center | active | Discovery | 2026-02-13 | Review WebSite-Overhaul/ folder | M | 1 | Y |
 | KinderGuard | kinderguard | active | Discovery | 2026-02-13 | Review Home_IGA_Report.docx | M | 1 | Y |
-| NORI Project OS | nori-project-os | active | Planning | 2026-02-13 | Initialize git repository at NORI root | L | 2 | Y |
-
+| NORI Project OS | nori-project-os | active | Planning | 2026-02-13 | Begin using NORI daily | L | 2 | Y |
 ---
 
 ## Paused Projects
@@ -41,7 +40,9 @@ _None_
 
 ## Archived Projects
 
-_None_
+| Project | Slug | State | Phase | Last Touched | Next Action (<30m) | Cognitive Load (S/M/L) | AI Autonomy (0–3) | AI Enabled (Y/N) |
+|---|---|---|---|---|---|---|---|---|
+| NORI Testing Playground | nori-testing-playground | archived | Discovery | 2026-02-13 | — | S | 1 | Y |
 
 ---
 

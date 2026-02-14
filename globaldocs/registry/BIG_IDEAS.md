@@ -26,7 +26,15 @@ _Ideas awaiting evaluation or promotion_
 
 -->
 
-_No ideas in inbox_
+### NORI Mobile Companion App
+
+- **Date Added:** 2026-02-13
+- **Why it matters:** Quick project status checks on mobile devices would enable on-the-go project management and daily check-ins
+- **First Tiny Step (<30m):** Research mobile frameworks (React Native vs Flutter) and assess feasibility
+- **Promotion Criteria:** If mobile access becomes a frequent need (>3x per week for 2 weeks) or if travel requires mobile project tracking
+- **Notes:** Low priority for now, but captures the idea for future consideration
+
+---
 
 ---
 
@@ -100,8 +108,8 @@ Archive when:
 
 ## Statistics
 
-- **Total Ideas (All Time):** 0
-- **Active Inbox:** 0
+- **Total Ideas (All Time):** 1
+- **Active Inbox:** 1
 - **Promoted:** 0
 - **Archived:** 0
 
