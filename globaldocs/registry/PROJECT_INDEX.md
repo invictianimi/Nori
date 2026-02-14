@@ -29,7 +29,7 @@ This is the canonical registry of all projects under NORI Project OS.
 | ATAS | atas | active | Discovery | 2026-02-13 | Review MARC/ folder structure | M | 1 | Y |
 | Certification Center | certification-center | active | Discovery | 2026-02-13 | Review WebSite-Overhaul/ folder | M | 1 | Y |
 | KinderGuard | kinderguard | active | Discovery | 2026-02-13 | Review Home_IGA_Report.docx | M | 1 | Y |
-| NORI Project OS | nori-project-os | active | Planning | 2026-02-13 | Run /Projects validate | L | 2 | Y |
+| NORI Project OS | nori-project-os | active | Planning | 2026-02-13 | Initialize git repository at NORI root | L | 2 | Y |
 
 ---
 
@@ -57,6 +57,6 @@ _None_
 
 ## Validation
 
-Last validation: _Never_
+Last validation: 2026-02-13 — Status: ✅ OK
 
 Run `/Projects validate` to verify registry integrity.
