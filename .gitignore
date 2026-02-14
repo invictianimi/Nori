@@ -1,0 +1,15 @@
+# Managed projects (have their own git repos)
+src/ATAS
+src/Certification-Center
+src/KinderGuard
+
+# IDE and system files
+.DS_Store
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
