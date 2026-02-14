@@ -36,6 +36,17 @@ Before executing any NORI-related command:
    - Run /Projects validate before any structural change.
    - Require correction before proceeding.
 
+8. **Git Repository Sync Check (Mandatory):**
+   - Run `git status` to check for uncommitted changes from previous sessions
+   - Run `git fetch` to check remote status
+   - If local and remote diverged:
+     - Report divergence to user
+     - Recommend pulling changes or resolving conflicts
+     - Do not proceed until repos are synchronized
+   - If uncommitted changes exist:
+     - Ask user if these are intentional work-in-progress
+     - Consider committing or stashing before proceeding
+
 ---
 
 ## Execution Discipline
@@ -77,5 +88,23 @@ Before concluding any NORI session:
    - Path to last log file
 
 5. Confirm with user that session state is accurate.
+
+6. **Git Commit and Push (Mandatory):**
+   - Run `git status` to check for uncommitted changes
+   - If uncommitted changes exist:
+     - Stage all session-related files (logs, STATUS, SESSION_STATE, registry, etc.)
+     - Create commit with descriptive message following git protocol
+     - Include Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+   - Push to remote: `git push`
+   - Verify push succeeded
+   - If push fails:
+     - Report error to user
+     - Do not mark session as complete until pushed
+   - **No session may close with uncommitted or unpushed work**
+
+7. Final Confirmation:
+   - Confirm working tree is clean
+   - Confirm local is up to date with remote
+   - Confirm session closure with user
 
 
