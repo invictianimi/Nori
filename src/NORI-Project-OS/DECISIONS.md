@@ -24,7 +24,28 @@ This log captures key decisions made throughout the project lifecycle.
 
 -->
 
-_No decisions logged yet_
+### Git Session Discipline (Mandatory End-of-Session Checks)
+
+- **Date:** 2026-02-13
+- **Decision:** All NORI sessions must end with git commit + push, and start with repo sync verification
+- **Rationale:** Discovered during session closure that uncommitted work exists. Need automated discipline to ensure:
+  1. All session work is committed and pushed before closing
+  2. Local repo matches remote before starting new work
+  3. No work is lost between sessions
+  4. Changes are immediately backed up to remote
+- **Owner:** NORI governance / Bootstrap protocol
+- **Impact:** Updates BOOTSTRAP.md End-of-Session Protocol with mandatory git checks
+- **Implementation:**
+  - **Session Start:** Check `git status` and `git fetch` to verify sync with remote
+  - **Session End:** Check for uncommitted changes, commit all work, push to remote
+  - **Automation:** Consider git hooks or checklist prompts
+- **Alternatives Considered:**
+  - Manual checks only (rejected - too easy to forget)
+  - Auto-commit everything (rejected - need intentional commit messages)
+  - Session-end reminder only (chosen - with mandatory verification)
+- **Links:** BOOTSTRAP.md Section: End-of-Session Protocol
+
+---
 
 ---
 
