@@ -56,8 +56,8 @@ NORI “awareness” comes from reading these files, not from memory.
 
 ## 2) Core Project Service Switch
 
-### `/Projects`
-**Purpose:** Enter “Project Service Mode.” Shows the operator menu and routes to workflows.
+### `/project`
+**Purpose:** Enter "Project Service Mode." Shows the operator menu and routes to workflows.
 
 **Expected behavior:**
 - Always reads `PROJECT_INDEX.md` first
@@ -70,7 +70,7 @@ NORI “awareness” comes from reading these files, not from memory.
 
 ## 3) Project Creation & Management
 
-### `/Projects new`
+### `/project new`
 **Purpose:** Create a new project with NORI scaffold and register it.
 
 **Does:**
@@ -84,7 +84,7 @@ NORI “awareness” comes from reading these files, not from memory.
 
 ---
 
-### `/Projects list`
+### `/project list`
 **Purpose:** Show all projects and their current status from the registry.
 
 **Does:**
@@ -94,7 +94,7 @@ NORI “awareness” comes from reading these files, not from memory.
 
 ---
 
-### `/Projects open <slug>`
+### `/project open <slug>`
 **Purpose:** Open a specific project and bring it into focus.
 
 **Does:**
@@ -113,7 +113,7 @@ NORI “awareness” comes from reading these files, not from memory.
 
 ---
 
-### `/Projects status <slug>`
+### `/project status <slug>`
 **Purpose:** Quick status review/update without full open workflow.
 
 **Does:**
@@ -126,7 +126,7 @@ NORI “awareness” comes from reading these files, not from memory.
 
 ## 4) Big Ideas (Idea Intake & Promotion)
 
-### `/Projects idea add`
+### `/project idea add`
 **Purpose:** Capture a new idea without creating a project.
 
 **Does:**
@@ -140,7 +140,7 @@ NORI “awareness” comes from reading these files, not from memory.
 
 ---
 
-### `/Projects idea list`
+### `/project idea list`
 **Purpose:** Review Big Ideas.
 
 **Does:**
@@ -157,7 +157,7 @@ NORI “awareness” comes from reading these files, not from memory.
 **Does:**
 - Requires explicit confirmation
 - Uses idea content to prefill PROJECT.md fields
-- Runs `/Projects new` flow
+- Runs `/project new` flow
 - Moves idea entry from Inbox → Promoted (never deletes)
 - Logs promotion
 
@@ -165,7 +165,7 @@ NORI “awareness” comes from reading these files, not from memory.
 
 ## 5) Daily Guidance & Momentum
 
-### `/Projects daily`
+### `/project daily`
 **Purpose:** Daily check-in that suggests the best next action across active projects.
 
 **Does:**
@@ -178,14 +178,14 @@ NORI “awareness” comes from reading these files, not from memory.
   - staleness (last touched)
   - cognitive load match
 - Proposes top 3 options
-- User selects one → routes to `/Projects open <slug>`
+- User selects one → routes to `/project open <slug>`
 - Logs outcome
 
 ---
 
 ## 6) Archiving & Lifecycle Hygiene
 
-### `/Projects archive <slug>`
+### `/project archive <slug>`
 **Purpose:** Retire a project safely without deletion.
 
 **Does:**
@@ -202,7 +202,7 @@ NORI “awareness” comes from reading these files, not from memory.
 
 ## 7) Validation & Audit
 
-### `/Projects validate`
+### `/project validate`
 **Purpose:** Run full integrity + governance + documentation drift audit.
 
 **Validates:**
@@ -247,11 +247,11 @@ NORI “awareness” comes from reading these files, not from memory.
 
 These may be implemented in later phases:
 
-- `/Projects discovery <slug>` (guided scoping interview)
-- `/Projects brainstorm <slug>` (structured ideation capture)
-- `/Projects directive <slug>` (convert discovery → directive)
+- `/project discovery <slug>` (guided scoping interview)
+- `/project brainstorm <slug>` (structured ideation capture)
+- `/project directive <slug>` (convert discovery → directive)
 - `/NORI assess-evolution` (system suggests next feature upgrades)
-- `/Projects snapshot` (checkpoint snapshots for rollback without git)
+- `/project snapshot` (checkpoint snapshots for rollback without git)
 
 Until implemented, these should be treated as placeholders only.
 
@@ -263,25 +263,25 @@ Start session:
 - `Read globaldocs/BOOTSTRAP.md and follow it strictly for this session.`
 
 Project menu:
-- `/Projects`
+- `/project`
 
 Create project:
-- `/Projects new`
+- `/project new`
 
 See all projects:
-- `/Projects list`
+- `/project list`
 
 Work on a project:
-- `/Projects open <slug>`
+- `/project open <slug>`
 
 Capture idea:
-- `/Projects idea add`
+- `/project idea add`
 
 Daily planning:
-- `/Projects daily`
+- `/project daily`
 
 Audit alignment:
-- `/Projects validate`
+- `/project validate`
 
 Archive project:
-- `/Projects archive <slug>`
+- `/project archive <slug>`

@@ -33,7 +33,7 @@ Before executing any NORI-related command:
    - Start new session?
 
 7. If System Health is Warning or Critical:
-   - Run /Projects validate before any structural change.
+   - Run /project validate before any structural change.
    - Require correction before proceeding.
 
 8. **Git Repository Sync Check (Mandatory):**

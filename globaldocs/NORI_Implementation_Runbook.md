@@ -183,7 +183,7 @@ Explain:
 - This project is managed under NORI Project OS
 - Which files are canonical
 - Where logs are stored
-- How `/Projects` works
+- How `/project` works
 - Archive-not-delete policy
 
 Also document these required folders (created per project):
@@ -201,19 +201,19 @@ Create:
 It must implement the command behavior below.
 
 ### Supported Commands
-- `/Projects` (menu)
-- `/Projects new`
-- `/Projects list`
-- `/Projects open <slug>`
-- `/Projects status <slug>`
-- `/Projects idea add`
-- `/Projects idea list`
-- `/Projects daily`
-- `/Projects archive <slug>`
-- `/Projects validate` (integrity checks)
+- `/project` (menu)
+- `/project new`
+- `/project list`
+- `/project open <slug>`
+- `/project status <slug>`
+- `/project idea add`
+- `/project idea list`
+- `/project daily`
+- `/project archive <slug>`
+- `/project validate` (integrity checks)
 
-### `/Projects` Menu
-When user types `/Projects`, show:
+### `/project` Menu
+When user types `/project`, show:
 1) Start New Project  
 2) List Projects + Status  
 3) Open Project  
@@ -227,7 +227,7 @@ When user types `/Projects`, show:
 
 ---
 
-## 7) Project Creation Workflow (`/Projects new`)
+## 7) Project Creation Workflow (`/project new`)
 
 ### Prompt the user for:
 - Project Name
@@ -260,9 +260,9 @@ When user types `/Projects`, show:
 
 ---
 
-## 8) Listing + Opening Projects (`/Projects list`, `/Projects open <slug>`)
+## 8) Listing + Opening Projects (`/project list`, `/project open <slug>`)
 
-### `/Projects list`
+### `/project list`
 - Read `PROJECT_INDEX.md`
 - Display the table
 - Ask user if they want:
@@ -270,7 +270,7 @@ When user types `/Projects`, show:
   - do daily check-in
   - add a big idea
 
-### `/Projects open <slug>`
+### `/project open <slug>`
 - Validate slug exists in registry
 - Read:
   - `src/<slug>/STATUS.md`
@@ -291,9 +291,9 @@ Any edits must:
 
 ---
 
-## 9) Big Ideas (`/Projects idea add`, `/Projects idea list`, Promote)
+## 9) Big Ideas (`/project idea add`, `/project idea list`, Promote)
 
-### `/Projects idea add`
+### `/project idea add`
 - Ask for:
   - Title
   - Why it matters
@@ -302,7 +302,7 @@ Any edits must:
 - Append to `BIG_IDEAS.md`
 - Log the action
 
-### `/Projects idea list`
+### `/project idea list`
 - Display sections and idea titles
 - Offer:
   - promote an idea → project (requires user confirmation)
@@ -310,13 +310,13 @@ Any edits must:
 
 ### Promote Idea → Project
 - Copy the idea content into `PROJECT.md` fields where relevant
-- Run `/Projects new` workflow (but prefilled)
+- Run `/project new` workflow (but prefilled)
 - Move idea entry from Inbox → Promoted section (do not delete)
 - Log the promotion
 
 ---
 
-## 10) Daily Check-in (`/Projects daily`)
+## 10) Daily Check-in (`/project daily`)
 
 Ask:
 - Energy (1–10)
@@ -334,13 +334,13 @@ Then:
     - 8–10 → any
 - Propose top 3 project options:
   - show slug + Next Action (<30m) + Cognitive Load
-- User selects one → run `/Projects open <slug>`
+- User selects one → run `/project open <slug>`
 
 Log the check-in result.
 
 ---
 
-## 11) Archive Policy (`/Projects archive <slug>`)
+## 11) Archive Policy (`/project archive <slug>`)
 
 Archive = move, never delete.
 
@@ -358,7 +358,7 @@ Archive = move, never delete.
 
 ---
 
-## 12) Integrity Validation (`/Projects validate`)
+## 12) Integrity Validation (`/project validate`)
 
 This is required for enterprise-grade stability.
 
@@ -443,7 +443,7 @@ Phase 1 is “done” when:
 - Registry exists and is correct
 - Big Ideas exists and is usable
 - Templates exist and are used for project creation
-- `/Projects` router works reliably
+- `/project` router works reliably
 - Legacy projects have wrappers
 - NORI-Project-OS exists as a project
 - Archive workflow works
@@ -466,10 +466,10 @@ If new needs are discovered during implementation:
 # EXECUTION INSTRUCTIONS (What to do now)
 
 1) Implement Sections 1–6 (structure + registries + templates + router)  
-2) Implement `/Projects validate`  
+2) Implement `/project validate`  
 3) Wrap legacy projects (Section 7/8/9)  
 4) Create NORI-Project-OS project (Section 13)  
-5) Run `/Projects validate` again  
+5) Run `/project validate` again  
 6) Create session logs for everything  
 
 Proceed step-by-step and pause after each major section with a brief summary of what was created/changed.
@@ -501,7 +501,7 @@ If rollback is required:
 4. Log rollback event in:
    - globaldocs/logs/YYYY-MM-DD_rollback.md
 5. Update SESSION_STATE.md.
-6. Run integrity validation (/Projects validate).
+6. Run integrity validation (/project validate).
 
 Rollback events must always be logged.
 No silent recovery actions are allowed.
@@ -640,7 +640,7 @@ If a project is detected that:
 
 The system must:
 
-1. Flag during /Projects validate
+1. Flag during /project validate
 2. Require remediation before further structural changes
 3. Log the violation
 4. Update SESSION_STATE.md with Warning or Critical status

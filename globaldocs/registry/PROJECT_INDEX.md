@@ -60,4 +60,4 @@ _None_
 
 Last validation: 2026-02-13 — Status: ✅ OK
 
-Run `/Projects validate` to verify registry integrity.
+Run `/project validate` to verify registry integrity.

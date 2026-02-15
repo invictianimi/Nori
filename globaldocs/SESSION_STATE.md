@@ -16,7 +16,7 @@ nori-project-os
 Complete command testing (10/10) + session closure
 
 ## Pending Next Action:
-Begin daily NORI usage - run `/Projects daily` each morning
+Begin daily NORI usage - run `/project daily` each morning
 
 ## System Health:
 OK

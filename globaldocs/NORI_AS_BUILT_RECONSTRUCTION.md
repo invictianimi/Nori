@@ -137,19 +137,19 @@ artifacts\
 Location:
 globaldocs/templates/prompts/PROJECT_SERVICE_PROMPT.md
 
-This file defines all `/Projects` command behavior.
+This file defines all `/project` command behavior.
 
 Supported commands:
 
-/Projects
-/Projects new
-/Projects list
-/Projects open <slug>
-/Projects idea add
-/Projects idea list
-/Projects daily
-/Projects archive <slug>
-/Projects validate
+/project
+/project new
+/project list
+/project open <slug>
+/project idea add
+/project idea list
+/project daily
+/project archive <slug>
+/project validate
 
 Router must:
 - Always read PROJECT_INDEX.md first

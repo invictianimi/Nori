@@ -52,9 +52,9 @@ The following files are the single source of truth for this project:
 Use the NORI Project Service commands:
 
 ```
-/Projects                    # Main menu
-/Projects open [slug]        # Open this project
-/Projects status [slug]      # View current status
+/project                    # Main menu
+/project open [slug]        # Open this project
+/project status [slug]      # View current status
 ```
 
 When you open a project, NORI will:
@@ -150,7 +150,7 @@ This project follows NORI governance policies:
 
 ## Validation
 
-Run `/Projects validate` to check:
+Run `/project validate` to check:
 - Registry consistency
 - Required files present
 - Structural compliance
@@ -170,13 +170,13 @@ Run `/Projects validate` to check:
 
 | Command | Purpose |
 |---|---|
-| `/Projects` | Main menu |
-| `/Projects list` | List all projects |
-| `/Projects open [slug]` | Open a project |
-| `/Projects status [slug]` | Check project status |
-| `/Projects daily` | Daily check-in (suggests project based on energy) |
-| `/Projects validate` | Run integrity checks |
-| `/Projects idea add` | Capture a new idea |
+| `/project` | Main menu |
+| `/project list` | List all projects |
+| `/project open [slug]` | Open a project |
+| `/project status [slug]` | Check project status |
+| `/project daily` | Daily check-in (suggests project based on energy) |
+| `/project validate` | Run integrity checks |
+| `/project idea add` | Capture a new idea |
 
 ---
 

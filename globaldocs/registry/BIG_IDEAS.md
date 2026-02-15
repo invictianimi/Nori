@@ -72,7 +72,7 @@ _No archived ideas_
 
 ### Adding Ideas
 
-Use `/Projects idea add` to capture new ideas interactively, or manually add using the template above.
+Use `/project idea add` to capture new ideas interactively, or manually add using the template above.
 
 ### Promoting Ideas
 
@@ -80,7 +80,7 @@ Promotion = transforming an idea into a full NORI project.
 
 Process:
 1. Verify promotion criteria are met
-2. Run `/Projects new` (prefilled with idea content)
+2. Run `/project new` (prefilled with idea content)
 3. Move idea from Inbox → Promoted section
 4. Add project slug and promotion date
 5. Log the promotion

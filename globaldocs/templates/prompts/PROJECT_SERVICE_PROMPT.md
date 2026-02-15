@@ -27,7 +27,7 @@ Your role is to help users manage projects through a structured, filesystem-base
 
 ## Command Reference
 
-### `/Projects` — Main Menu
+### `/project` — Main Menu
 
 **Behavior:**
 
@@ -56,7 +56,7 @@ What would you like to do?
 
 ---
 
-### `/Projects new` — Create New Project
+### `/project new` — Create New Project
 
 **Behavior:**
 
@@ -130,7 +130,7 @@ What would you like to do?
 
 ---
 
-### `/Projects list` — List All Projects
+### `/project list` — List All Projects
 
 **Behavior:**
 
@@ -155,7 +155,7 @@ What would you like to do?
 
 ---
 
-### `/Projects open <slug>` — Open Project
+### `/project open <slug>` — Open Project
 
 **Behavior:**
 
@@ -222,7 +222,7 @@ What would you like to do?
 
 ---
 
-### `/Projects status <slug>` — Quick Status Check
+### `/project status <slug>` — Quick Status Check
 
 **Behavior:**
 
@@ -239,7 +239,7 @@ What would you like to do?
 
 ---
 
-### `/Projects idea add` — Capture New Idea
+### `/project idea add` — Capture New Idea
 
 **Behavior:**
 
@@ -278,7 +278,7 @@ What would you like to do?
 
 ---
 
-### `/Projects idea list` — List Big Ideas
+### `/project idea list` — List Big Ideas
 
 **Behavior:**
 
@@ -299,7 +299,7 @@ What would you like to do?
 
 **If promoting idea:**
 - Copy idea content
-- Launch `/Projects new` workflow (prefilled)
+- Launch `/project new` workflow (prefilled)
 - Move idea from Inbox → Promoted section
 - Add project slug and promotion date
 - Log promotion
@@ -312,7 +312,7 @@ What would you like to do?
 
 ---
 
-### `/Projects daily` — Daily Check-in
+### `/project daily` — Daily Check-in
 
 **Behavior:**
 
@@ -346,7 +346,7 @@ What would you like to do?
    ```
 
 5. **User selects:**
-   - Run `/Projects open <slug>` for selected project
+   - Run `/project open <slug>` for selected project
 
 6. **Log check-in:**
    - File: `globaldocs\logs\YYYY-MM-DD_projects-session.md`
@@ -356,7 +356,7 @@ What would you like to do?
 
 ---
 
-### `/Projects archive <slug>` — Archive Project
+### `/project archive <slug>` — Archive Project
 
 **Behavior:**
 
@@ -401,7 +401,7 @@ What would you like to do?
 
 ---
 
-### `/Projects validate` — Integrity Validation
+### `/project validate` — Integrity Validation
 
 **Behavior:**
 
@@ -516,7 +516,7 @@ OVERALL SYSTEM HEALTH:     [OK / Warning / Critical]
 
 ## Command Routing Logic
 
-When user types `/Projects [command] [args]`:
+When user types `/project [command] [args]`:
 
 1. Parse command and arguments
 2. Always read `PROJECT_INDEX.md` first (except for validation)
@@ -545,7 +545,7 @@ When user types `/Projects [command] [args]`:
 # Projects Session — YYYY-MM-DD HH:MM
 
 ## Commands Executed
-- /Projects [command]
+- /project [command]
 
 ## Files Changed
 - [path]
@@ -662,7 +662,7 @@ When editing files:
 ## Session Flow
 
 Typical session:
-1. User runs `/Projects` or `/Projects [command]`
+1. User runs `/project` or `/project [command]`
 2. Read registry
 3. Execute command
 4. Update files (minimal diffs)

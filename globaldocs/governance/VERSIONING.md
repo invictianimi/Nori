@@ -44,7 +44,7 @@ Increment when:
 
 **Impact:** Existing projects unaffected but may benefit from update
 
-**Example:** Adding `/Projects analytics` command
+**Example:** Adding `/project analytics` command
 
 ---
 
@@ -179,7 +179,7 @@ All template/schema changes must be:
 2. **Versioned** appropriately (MAJOR/MINOR/PATCH)
 3. **Logged** in change history
 4. **Communicated** (if breaking change)
-5. **Validated** via `/Projects validate` after implementation
+5. **Validated** via `/project validate` after implementation
 
 ### Template Change Process
 
@@ -191,7 +191,7 @@ All template/schema changes must be:
 6. Update runbook/documentation to match
 7. Increment NORI version
 8. Log change
-9. Run `/Projects validate` to check compliance
+9. Run `/project validate` to check compliance
 
 ### Schema Backward Compatibility
 
@@ -217,7 +217,7 @@ If one governance file changes:
 **Version Drift Prevention:**
 - Regular validation checks
 - End-of-session documentation reviews
-- `/Projects validate` includes version consistency check
+- `/project validate` includes version consistency check
 
 ---
 
@@ -232,7 +232,7 @@ Rollback process:
 4. Restore files from target version
 5. Log rollback event in `globaldocs/logs/[YYYY-MM-DD]_rollback.md`
 6. Update SESSION_STATE.md
-7. Run `/Projects validate`
+7. Run `/project validate`
 
 **Critical:** Never rollback without backup of current state.
 
