@@ -13,10 +13,10 @@ It is updated at the end of every NORI session.
 nori-project-os
 
 ## Last Command Executed:
-git commit (archived ATAS project + idea, updated /idea skill to v1.2.0)
+git commit --amend (fixed commit workflow, added NORI_GIT_WORKFLOW.md)
 
 ## Pending Next Action:
-Session complete - archives logged, skill updated, commits created
+Session complete - proper git workflow documented and applied
 
 ## System Health:
 OK
