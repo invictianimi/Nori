@@ -13,25 +13,27 @@ It is updated at the end of every NORI session.
 nori-project-os
 
 ## Last Command Executed:
-Completed NORI architectural migration (src/ → projects/, project type system)
+/bootstrap strict → /project validate → Fixed slug/folder mismatch and documentation drift
 
 ## Pending Next Action:
-Test /project commands with new structure, add Phase 5 enhancements (future session)
+Push validation fixes to remote, then continue with normal NORI operations
 
 ## System Health:
 OK
 
 ## Last Log File:
-globaldocs/logs/2026-02-15_migration-projects-restructure.md (to be created)
+globaldocs/logs/2026-02-15_validation-and-fixes.md
 
 ## Notes:
-- MAJOR MIGRATION COMPLETE: src/ → projects/, new src/ for system code
-- Project type system fully implemented (C#, TypeScript, Python, Documentation, Mixed)
-- 8 template files created (VS solutions + VS Code workspaces)
-- All 3 active projects updated with Project Type
-- SKILL.md updated to v1.6.0 with all path references corrected
-- NORI_GIT_WORKFLOW.md extended to v1.2.0 for source code management
-- .code-workspace files created for Certification-Center and NORI-Project-OS
-- All schemas and documentation updated
-- Pre-migration snapshot: tag pre-migration/projects-restructure/2026-02-15
-- Migration ready for final commit and validation
+- BOOTSTRAP strict mode session completed successfully
+- System validation performed post-migration
+- Fixed critical slug/folder name mismatch (TitleCase → lowercase-hyphen)
+- Updated all documentation drift (src/ → projects/ references)
+- All 3 active project folders renamed to match registry:
+  - Certification-Center → certification-center
+  - KinderGuard → kinderguard
+  - NORI-Project-OS → nori-project-os
+- PROJECT_SERVICE_PROMPT.md: 10 path references updated
+- Validation log created: 2026-02-15_validation-and-fixes.md
+- System health: ✅ OK — All governance standards met
+- Ready for git commit and push per BOOTSTRAP End-of-Session Protocol

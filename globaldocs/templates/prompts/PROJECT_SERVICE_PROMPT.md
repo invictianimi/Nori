@@ -78,7 +78,7 @@ What would you like to do?
    - Verify slug is unique (check registry)
 
 3. **Create project structure:**
-   - Create folder: `E:\MyProjects\NORI\src\<slug>\`
+   - Create folder: `E:\MyProjects\NORI\projects\<slug>\`
    - Create subfolders:
      - `logs\`
      - `kb\`
@@ -101,7 +101,7 @@ What would you like to do?
    - Set other fields from user input
 
 6. **Create initial log:**
-   - File: `src\<slug>\logs\YYYY-MM-DD_project-created.md`
+   - File: `projects\<slug>\logs\YYYY-MM-DD_project-created.md`
    - Include:
      - Project name and slug
      - Initial parameters
@@ -164,8 +164,8 @@ What would you like to do?
    - If not found, list available slugs and ask user to try again
 
 2. **Read project files:**
-   - Read: `src/<slug>/STATUS.md`
-   - Read: `src/<slug>/PROJECT.md`
+   - Read: `projects/<slug>/STATUS.md`
+   - Read: `projects/<slug>/PROJECT.md`
 
 3. **Summarize to user:**
    ```
@@ -211,7 +211,7 @@ What would you like to do?
    - Create log entry
 
 7. **Create session log:**
-   - File: `src/<slug>/logs/YYYY-MM-DD_<session-name>.md`
+   - File: `projects/<slug>/logs/YYYY-MM-DD_<session-name>.md`
    - Document what was done
    - Log decisions made
    - Record new Next Action
@@ -227,7 +227,7 @@ What would you like to do?
 **Behavior:**
 
 1. Validate slug exists
-2. Read `src/<slug>/STATUS.md`
+2. Read `projects/<slug>/STATUS.md`
 3. Display:
    - Current phase
    - Next Action
@@ -375,8 +375,8 @@ What would you like to do?
    ```
 
 3. **If confirmed:**
-   - Create archive folder: `src\_archive\<slug>\YYYY-MM-DD\`
-   - Move entire project folder: `src\<slug>\` → `src\_archive\<slug>\YYYY-MM-DD\`
+   - Create archive folder: `projects\_archive\<slug>\YYYY-MM-DD\`
+   - Move entire project folder: `projects\<slug>\` → `projects\_archive\<slug>\YYYY-MM-DD\`
    - Update registry row:
      - State = `archived`
      - Last Touched = today
@@ -395,7 +395,7 @@ What would you like to do?
 
 6. **Confirm:**
    - "Project '[Name]' archived successfully."
-   - "Location: src\_archive\<slug>\YYYY-MM-DD\"
+   - "Location: projects\_archive\<slug>\YYYY-MM-DD\"
 
 **Important:** Never delete. Always move to archive.
 
@@ -411,8 +411,8 @@ This command performs comprehensive system health checks.
 
 - Verify `PROJECT_INDEX.md` exists
 - Check for duplicate slugs
-- Verify all non-archived registry entries have matching folders in `src\`
-- Verify all `src\` folders (excluding `_archive`) exist in registry
+- Verify all non-archived registry entries have matching folders in `projects\`
+- Verify all `projects\` folders (excluding `_archive`) exist in registry
 - Verify required fields populated for each row
 
 **Report:**
@@ -427,7 +427,7 @@ Issues found:
 
 For each non-archived project:
 
-- Verify folder exists: `src\<slug>\`
+- Verify folder exists: `projects\<slug>\`
 - Verify required files exist:
   - PROJECT.md
   - STATUS.md
@@ -559,7 +559,7 @@ When user types `/project [command] [args]`:
 
 ### Per-Project Log
 
-**File:** `src\<slug>\logs\YYYY-MM-DD_<session-title>.md`
+**File:** `projects\<slug>\logs\YYYY-MM-DD_<session-title>.md`
 
 **Must include:**
 - Context (what you were working on)

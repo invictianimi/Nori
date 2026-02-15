@@ -2,7 +2,7 @@
 
 This is the canonical registry of all projects under NORI Project OS.
 
-**Last Updated:** 2026-02-14
+**Last Updated:** 2026-02-15
 
 ---
 
@@ -60,6 +60,6 @@ _None_
 
 ## Validation
 
-Last validation: 2026-02-13 — Status: ✅ OK
+Last validation: 2026-02-15 — Status: ✅ OK (post-migration fixes applied)
 
 Run `/project validate` to verify registry integrity.
