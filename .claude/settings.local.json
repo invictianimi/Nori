@@ -3,7 +3,9 @@
     "allow": [
       "Bash(ls:*)",
       "Bash(xargs:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(git remote:*)",
+      "Bash(test:*)"
     ]
   }
 }
