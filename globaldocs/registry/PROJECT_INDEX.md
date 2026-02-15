@@ -53,6 +53,7 @@ _None_
 - **Required fields:** All fields in the schema must have valid values for active/paused projects
 - **Orphan detection:** All folders in `src\` (excluding `_archive`) must have registry entries
 - **Structural compliance:** All registered projects must have required NORI scaffold files
+- **Git workflow:** Follow [NORI_GIT_WORKFLOW.md](../NORI_GIT_WORKFLOW.md) - update PROJECT_INDEX.md, then SESSION_STATE.md, then commit together
 
 ---
 

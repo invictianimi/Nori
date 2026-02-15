@@ -1,6 +1,16 @@
 # NORI Git Workflow
 
+**SCOPE:** Universal Standard - Applies to ALL projects, ALL contexts, ALL sessions
+
 ## Session Closure and Git Commit Best Practice
+
+**This is the CANONICAL workflow for:**
+- ✅ NORI Project OS
+- ✅ All NORI projects (current and future)
+- ✅ BIG_IDEAS.md management
+- ✅ Skills development
+- ✅ Any git-managed work session
+- ✅ Global workflow standard
 
 To avoid uncommitted changes after session commits, follow this order:
 
@@ -109,6 +119,30 @@ If working with multiple repositories (e.g., NORI + Skills):
 
 ---
 
+## NORI-Specific Registry Updates
+
+This workflow applies to ALL NORI registry and state files:
+
+### Always Update BEFORE Committing:
+- ✅ `SESSION_STATE.md` - Session closure state
+- ✅ `PROJECT_INDEX.md` - Project registry updates (after archives/additions)
+- ✅ `BIG_IDEAS.md` - Idea registry updates (after archives/additions)
+- ✅ All log files created during session
+
+### Example: Archiving Workflow
+```bash
+# 1. Archive project/idea (creates logs, moves files)
+# 2. Update registry (PROJECT_INDEX.md or BIG_IDEAS.md)
+# 3. Update SESSION_STATE.md with final state
+# 4. Stage all: git add .
+# 5. Commit everything together
+# 6. Verify: git status → clean working tree
+```
+
+**Critical Rule:** NEVER commit without including final state files!
+
+---
+
 ## Automation Consideration
 
 For future automation (hooks, scripts):
@@ -118,6 +152,23 @@ For future automation (hooks, scripts):
 
 ---
 
-**Version:** 1.0.0
+## Governance Declaration
+
+**This document establishes the UNIVERSAL GIT WORKFLOW STANDARD for:**
+
+1. **NORI Project OS** - All session work and commits
+2. **All NORI Projects** - Current (Certification-Center, KinderGuard, NORI-Project-OS) and future
+3. **BIG_IDEAS.md Management** - Idea additions, promotions, archives
+4. **PROJECT_INDEX.md Management** - Project registrations, state changes, archives
+5. **Skills Development** - All skill updates and commits
+6. **Global Standard** - Any git-managed work, any context, any session
+
+**Enforcement:** This workflow is MANDATORY for all NORI operations.
+
+**Rationale:** Ensures clean working trees, complete session state capture, and proper audit trails.
+
+---
+
+**Version:** 1.1.0 (Universal Standard)
 **Last Updated:** 2026-02-14
-**Status:** Active Reference
+**Status:** Active Reference - MANDATORY COMPLIANCE

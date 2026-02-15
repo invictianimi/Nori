@@ -105,6 +105,7 @@ Archive when:
 - **Idea template compliance:** All inbox ideas should follow the template structure
 - **Promotion tracking:** All promoted ideas must link to their project
 - **Logging:** All promotions and archives must be logged
+- **Git workflow:** Follow [NORI_GIT_WORKFLOW.md](../NORI_GIT_WORKFLOW.md) - update BIG_IDEAS.md, then SESSION_STATE.md, then commit together
 
 ---
 
