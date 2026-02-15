@@ -62,6 +62,38 @@ active
 
 ---
 
+## Project Type & Build Configuration
+
+### Project Type
+
+Mixed
+
+### Build System
+
+**Visual Studio Solution:** Yes (Future)
+- Solution Path: src/NORI.Core/NORI.Core.sln
+- Primary Language: C#
+
+**VS Code Workspace:** Yes
+- Workspace Path: NORI-Project-OS.code-workspace
+- Primary Language: Multiple (C#, Markdown)
+
+### Source Code Location
+
+**Project Source Directory:** src/ (to be created)
+
+**Submodules/Nested Repos:** None
+
+### Build Configuration
+
+**Build Command:** dotnet build src/NORI.Core/NORI.Core.sln (when created)
+
+**Test Command:** dotnet test src/NORI.Core/NORI.Core.sln (when created)
+
+**Build Artifacts:** bin/, obj/, .vs/
+
+---
+
 ## AI Configuration
 
 ### AI Enabled

@@ -53,6 +53,45 @@
 
 ---
 
+## Project Type & Build Configuration
+
+### Project Type
+
+[C# | TypeScript | Python | Documentation | Mixed]
+
+**Type Definitions:**
+- **C#**: .NET/C# project with Visual Studio solution
+- **TypeScript**: Node.js/TypeScript project with VS Code workspace
+- **Python**: Python project with VS Code workspace
+- **Documentation**: Documentation-only project (no build system)
+- **Mixed**: Multiple languages/technologies
+
+### Build System
+
+**Visual Studio Solution:** [Yes / No / N/A]
+- Solution Path: [Relative path to .sln file if Yes]
+- Primary Language: [C#, VB.NET, F#, etc.]
+
+**VS Code Workspace:** [Yes / No / N/A]
+- Workspace Path: [Relative path to .code-workspace file if Yes]
+- Primary Language: [TypeScript, JavaScript, Python, etc.]
+
+### Source Code Location
+
+**Project Source Directory:** [Path relative to project root, typically `src/`]
+
+**Submodules/Nested Repos:** [List any nested git repositories]
+
+### Build Configuration
+
+**Build Command:** [Command to build project, e.g., `dotnet build`, `npm run build`]
+
+**Test Command:** [Command to run tests, e.g., `dotnet test`, `npm test`]
+
+**Build Artifacts:** [Directories excluded from git: bin/, obj/, node_modules/, etc.]
+
+---
+
 ## AI Configuration
 
 ### AI Enabled

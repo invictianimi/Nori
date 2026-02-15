@@ -1,0 +1,38 @@
+{
+  "folders": [
+    {
+      "name": "NORI Project OS - Root",
+      "path": "."
+    },
+    {
+      "name": "Documentation",
+      "path": "kb"
+    },
+    {
+      "name": "Source Code",
+      "path": "src"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/.next": true,
+      "**/bin": true,
+      "**/obj": true,
+      "**/.vs": true,
+      "**/dist": true,
+      "**/build": true,
+      "**/__pycache__": true,
+      "**/.pytest_cache": true
+    },
+    "editor.formatOnSave": true
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-dotnettools.csharp",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "ms-python.python"
+    ]
+  }
+}

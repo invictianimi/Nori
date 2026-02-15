@@ -25,7 +25,8 @@ Root:
 
 Existing:
 - `E:\MyProjects\NORI\globaldocs\`
-- `E:\MyProjects\NORI\src\`
+- `E:\MyProjects\NORI\projects\` (renamed from src/)
+- `E:\MyProjects\NORI\src\` (NORI system source code)
 
 Create/ensure (global):
 - `E:\MyProjects\NORI\globaldocs\registry\`
@@ -36,7 +37,7 @@ Create/ensure (global):
 - `E:\MyProjects\NORI\globaldocs\logs\`
 
 Create/ensure (projects):
-- `E:\MyProjects\NORI\src\_archive\`
+- `E:\MyProjects\NORI\projects\_archive\`
 
 ---
 

@@ -1,7 +1,8 @@
+# NORI Project OS - Root .gitignore
+
 # Managed projects (have their own git repos)
-src/ATAS
-src/Certification-Center
-src/KinderGuard
+# NOTE: Nested repos in projects/ are preserved, not ignored
+# Git handles these as separate repositories
 
 # IDE and system files
 .DS_Store
@@ -13,3 +14,18 @@ src/KinderGuard
 # Temporary files
 *.tmp
 *.bak
+
+# Build artifacts (for projects without nested repos)
+**/bin/
+**/obj/
+**/.vs/
+**/*.user
+**/node_modules/
+**/.next/
+**/dist/
+**/build/
+**/__pycache__/
+**/.pytest_cache/
+
+# But preserve nested git repos
+!projects/*/src/**/.git/

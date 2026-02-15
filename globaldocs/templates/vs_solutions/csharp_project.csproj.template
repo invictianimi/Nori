@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>{{DOTNET_VERSION}}</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Authors>NORI Project OS</Authors>
+    <Company>NORI</Company>
+    <Copyright>Copyright © {{YEAR}}</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Add NuGet package references here -->
+  </ItemGroup>
+
+</Project>

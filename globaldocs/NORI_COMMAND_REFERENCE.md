@@ -76,7 +76,7 @@ NORI “awareness” comes from reading these files, not from memory.
 **Does:**
 - Prompts for project name/outcome/success metrics/constraints
 - Generates slug
-- Creates `src/<slug>/` + standard subfolders
+- Creates `projects/<slug>/` + standard subfolders
 - Copies scaffold files
 - Populates PROJECT.md + STATUS.md
 - Adds row to PROJECT_INDEX
@@ -238,7 +238,7 @@ NORI “awareness” comes from reading these files, not from memory.
 - Ask before overwriting
 - Minimal diffs
 - Logs are append-only
-- All projects in `src/` must be in `PROJECT_INDEX.md`
+- All projects in `projects/` must be in `PROJECT_INDEX.md`
 - All projects must have NORI wrapper files (legacy projects get wrapped, not refactored)
 
 ---

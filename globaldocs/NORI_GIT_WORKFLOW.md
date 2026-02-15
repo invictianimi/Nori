@@ -152,6 +152,127 @@ For future automation (hooks, scripts):
 
 ---
 
+## Source Code Management
+
+### NORI System Source Code (`src/` directory)
+
+**Scope:** C# code in `src/NORI.Core/`, `src/NORI.CLI/`, etc.
+
+**Workflow:**
+1. Make source code changes
+2. Build and test locally:
+   ```bash
+   cd /e/MyProjects/Nori/src/NORI.Core
+   dotnet build
+   dotnet test
+   ```
+3. Stage source files (NOT build artifacts):
+   ```bash
+   cd /e/MyProjects/Nori
+   git add src/**/*.cs src/**/*.csproj src/**/*.sln
+   # Verify build artifacts excluded:
+   git status --ignored
+   ```
+4. Commit with descriptive message:
+   ```bash
+   git commit -m "Add project validation to NORI.Core
+
+   Implemented:
+   - ProjectValidator class
+   - Schema validation logic
+   - Unit tests for validation
+
+   Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"
+   ```
+5. Verify clean working tree
+
+**Build Artifacts:** ALWAYS excluded via `.gitignore`:
+- `bin/`
+- `obj/`
+- `.vs/`
+- `*.user`
+
+### Project-Level Source Code (`projects/<slug>/src/`)
+
+**Scope:** Source code for individual NORI projects
+
+**Workflow Varies by Project Type:**
+
+**TypeScript/Node.js Projects:**
+- Commit: `package.json`, `package-lock.json`, `tsconfig.json`, source files
+- Exclude: `node_modules/`, `.next/`, `dist/`, `build/`
+- Workspace file: COMMIT to git
+
+**C# Projects:**
+- Commit: `.sln`, `.csproj`, source files
+- Exclude: `bin/`, `obj/`, `.vs/`, `*.user`
+- Solution file: COMMIT to git
+
+**Python Projects:**
+- Commit: `requirements.txt`, source files
+- Exclude: `__pycache__/`, `.pytest_cache/`, `venv/`
+
+**Documentation Projects:**
+- Commit: All documentation files
+- No build artifacts
+
+**Nested Git Repositories:**
+- If project has nested `.git/` (like Certification-Center/WebSite-Overhaul):
+  - Manage inner repo independently
+  - NORI outer repo tracks project metadata only
+  - Submodule reference committed in outer repo
+
+### VS Solutions and Workspaces
+
+**ALWAYS COMMIT:**
+- `*.sln` (Visual Studio solution files)
+- `*.csproj` (C# project files)
+- `*.code-workspace` (VS Code workspace files)
+
+**RATIONALE:**
+- Solutions/workspaces are configuration, not artifacts
+- Enable team members to open projects immediately
+- Part of project structure documentation
+
+### Archive Workflow for Source Code
+
+When archiving a project with source code:
+
+1. Archive INCLUDES source code and VS solutions:
+   ```bash
+   # Archive moves everything including src/
+   mv projects/my-project projects/_archive/my-project/2026-02-15/
+   ```
+
+2. Verify nested git repos preserved:
+   ```bash
+   find projects/_archive/my-project/2026-02-15 -name ".git" -type d
+   ```
+
+3. Commit archive operation (solution files move with project)
+
+4. Tag with project type:
+   ```bash
+   git tag -a "archive/my-project/2026-02-15" -m "Archive: MyProject (TypeScript)"
+   ```
+
+### .gitignore Strategy
+
+**Root `.gitignore`:**
+- Global exclusions for ALL projects
+- Wildcard patterns: `**/bin/`, `**/node_modules/`, etc.
+- Preserve nested repos: `!projects/*/src/**/.git/`
+
+**`src/.gitignore` (NORI system code):**
+- .NET-specific exclusions
+- More aggressive (this is controlled code)
+
+**Project-level `.gitignore` (in nested repos):**
+- Managed by project's own git repo
+- NORI doesn't interfere
+
+---
+
 ## Governance Declaration
 
 **This document establishes the UNIVERSAL GIT WORKFLOW STANDARD for:**
@@ -169,6 +290,6 @@ For future automation (hooks, scripts):
 
 ---
 
-**Version:** 1.1.0 (Universal Standard)
-**Last Updated:** 2026-02-14
+**Version:** 1.2.0 (Extended for Source Code)
+**Last Updated:** 2026-02-15
 **Status:** Active Reference - MANDATORY COMPLIANCE
