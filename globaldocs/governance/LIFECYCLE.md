@@ -2,8 +2,8 @@
 
 This document defines the standard lifecycle phases for all NORI-managed projects.
 
-**Version:** v0.1.0
-**Last Updated:** 2026-02-13
+**Version:** v0.2.0
+**Last Updated:** 2026-02-17
 **Authority:** Vit
 
 ---
@@ -134,43 +134,74 @@ This document defines the standard lifecycle phases for all NORI-managed project
 
 ### Phase Skip Criteria
 
-_(To be defined based on project experience)_
-
-Placeholder for conditions under which phases can be safely skipped.
-
-Examples:
-- Tiny projects (cognitive load = S) might skip Planning
-- Well-understood problems might compress Discovery
-- Proof-of-concept work might skip formal Testing
-
 **Rule:** All phase skips must be logged in DECISIONS.md with rationale.
+
+| From | To | Skip Allowed When |
+|---|---|---|
+| Spark | Discovery | Idea is immediately actionable and outcome is clear |
+| Discovery | Planning | Problem is already well-understood (repeat domain, existing template) |
+| Discovery | Build | Cognitive Load = S and desired outcome is unambiguous |
+| Planning | Build | Architecture is trivially obvious; risk identification can happen inline |
+| Build | Deploy | No test phase needed (documentation-only projects, config changes) |
+| Test | Deploy | Tests are embedded in Build and continuously validated |
+
+**Conservative default:** Only skip phases for Cognitive Load = S projects. Medium and Large projects must pass through all phases.
+
+**Never skip:** Logging a phase transition in project logs. Even skipped phases must be recorded.
 
 ---
 
 ## Decision Gates
 
-_(To be defined based on governance maturity)_
+Gate checks are required before advancing to the next phase. Log gate passage in project logs.
 
-Placeholder for formal go/no-go decision points between phases.
+### Discovery → Planning
+- [ ] Problem stated in one sentence
+- [ ] Desired outcome defined (what does done look like?)
+- [ ] Rough success metrics identified
+- [ ] Known constraints captured
+- [ ] Decision made: proceed, pause, or archive
 
-Examples:
-- Discovery → Planning: Is the problem well-defined?
-- Build → Test: Is the solution stable enough to test?
-- Test → Deploy: Do success criteria pass?
+### Planning → Build
+- [ ] Solution approach documented in PROJECT.md or DECISIONS.md
+- [ ] Key risks logged in RISKS.md
+- [ ] Task breakdown exists (Upcoming Milestones in STATUS.md)
+- [ ] Next Action is concrete and <30 minutes
+- [ ] No unresolved blockers
+
+### Build → Test
+- [ ] Core functionality builds without errors
+- [ ] Intended behavior can be demonstrated or observed
+- [ ] No critical defects blocking testing
+- [ ] Test approach defined
+
+### Test → Deploy
+- [ ] Defined success metrics pass (from Discovery)
+- [ ] Known defects are documented and prioritized
+- [ ] Deployment approach defined or N/A for personal projects
+
+### Deploy → Ops & Iteration
+- [ ] Solution is live/in use
+- [ ] Initial feedback captured
+- [ ] Ongoing maintenance approach defined
 
 ---
 
 ## Governance Triggers
 
-_(To be defined based on risk management needs)_
+The following events require explicit governance action before work continues.
 
-Placeholder for conditions that require explicit governance review.
-
-Examples:
-- Budget exceeds threshold
-- Timeline extends beyond estimate by X%
-- Critical risk materializes
-- Scope changes significantly
+| Trigger | Required Action |
+|---|---|
+| Registry schema field added or removed | Update schema in PROJECT_INDEX.md, update templates, version bump in VERSIONING.md |
+| Template field added or removed | Update template files, update PROJECT_SERVICE_PROMPT.md, version bump |
+| New command added to project service | Update PROJECT_SERVICE_PROMPT.md, update NORI_Implementation_Runbook.md |
+| Risk materializes (RISKS.md) | Move risk to Materialized, log in DECISIONS.md, update SESSION_STATE.md health |
+| System health goes to Critical | Halt structural changes, run `/project validate`, resolve before continuing |
+| Project phase transitions | Update STATUS.md + PROJECT_INDEX.md + log in project logs |
+| Session with uncommitted changes | Commit + push before closing (mandatory per BOOTSTRAP.md) |
+| Breaking change to any NORI schema | MAJOR version bump, review all projects for compliance |
+| C# domain model diverges from markdown schema | Halt Build work, reconcile, log decision, run `/project validate` |
 
 ---
 
@@ -204,3 +235,4 @@ Example: A project in "Build" phase can be "paused" if you take a break.
 | Version | Date | Changes | Author |
 |---|---|---|---|
 | v0.1.0 | 2026-02-13 | Initial lifecycle definition | NORI Bootstrap |
+| v0.2.0 | 2026-02-17 | Filled in Phase Skip Criteria, Decision Gates, and Governance Triggers based on real project experience | Vit |

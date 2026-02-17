@@ -2,8 +2,8 @@
 
 This document defines how NORI Project OS and its governed projects manage versions, changes, and evolution.
 
-**Version:** v0.1.0
-**Last Updated:** 2026-02-13
+**Version:** v0.2.0
+**Last Updated:** 2026-02-17
 **Authority:** Vit
 
 ---
@@ -75,7 +75,7 @@ Files versioned as a cohesive unit:
 - PROJECT_SERVICE_PROMPT.md
 - All templates in `templates/project_scaffold/`
 
-**Current NORI Version:** v0.1.0
+**Current NORI Version:** v0.2.0
 
 ---
 
@@ -266,3 +266,4 @@ Critical documentation drift halts structural changes until resolved.
 | Version | Date | Changes | Author |
 |---|---|---|---|
 | v0.1.0 | 2026-02-13 | Initial versioning policy defined | NORI Bootstrap |
+| v0.2.0 | 2026-02-17 | Big Ideas framework improvements: added optional fields (Status, Last Reviewed, Tags) to idea template; fixed stats update gaps in promote/archive command flows; added idea staleness check to /project daily | Vit |

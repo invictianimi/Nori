@@ -54,7 +54,7 @@ System Development / Infrastructure Project
 
 ### Current Phase
 
-Planning
+Build
 
 ### State
 
@@ -149,12 +149,12 @@ Y
 
 **Evolution:** NORI is expected to evolve. Follow controlled evolution clause - log all structural changes, version appropriately, update documentation.
 
-**Current Phase:** Planning phase covers finalization of initial implementation and validation.
+**Current Phase:** Build phase — NORI.Core C# library development. Scaffold created 2026-02-17. Governance/markdown system operational at v0.2.0 and iterating in parallel.
 
 ---
 
 ## Metadata
 
-**Last Updated:** 2026-02-13
+**Last Updated:** 2026-02-17
 
-**NORI Version:** v0.1.0
+**NORI Version:** v0.2.0

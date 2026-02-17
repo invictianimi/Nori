@@ -2,7 +2,7 @@
 
 This is the canonical registry of all projects under NORI Project OS.
 
-**Last Updated:** 2026-02-15
+**Last Updated:** 2026-02-17
 
 ---
 
@@ -29,7 +29,7 @@ This is the canonical registry of all projects under NORI Project OS.
 |---|---|---|---|---|---|---|---|---|---|
 | Certification Center | certification-center | active | Discovery | TypeScript | 2026-02-13 | Create .code-workspace file | M | 1 | Y |
 | KinderGuard | kinderguard | active | Discovery | Documentation | 2026-02-13 | Review Home_IGA_Report.docx | M | 1 | Y |
-| NORI Project OS | nori-project-os | active | Planning | Mixed | 2026-02-13 | Add C# core library structure | L | 2 | Y |
+| NORI Project OS | nori-project-os | active | Build | Mixed | 2026-02-17 | Define NORI.Core domain model (NoriProject, ProjectRegistry, ValidationResult) | L | 2 | Y |
 ---
 
 ## Paused Projects
@@ -60,6 +60,6 @@ _None_
 
 ## Validation
 
-Last validation: 2026-02-15 — Status: ✅ OK (post-migration fixes applied)
+Last validation: 2026-02-17 — Status: ✅ OK
 
 Run `/project validate` to verify registry integrity.

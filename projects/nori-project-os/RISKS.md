@@ -26,7 +26,61 @@ This log identifies and tracks risks throughout the project lifecycle.
 
 -->
 
-_No active risks identified_
+### Over-Engineering the C# Layer
+
+- **Risk:** Building a complex framework in NORI.Core when the markdown + AI model is sufficient for current needs. Temptation to abstract too early before real usage patterns are known.
+- **Likelihood:** M
+- **Impact:** H
+- **Priority:** H
+- **Mitigation:** Start with the minimum viable implementation — read-only registry access first. No abstractions without two concrete use cases. Review scope at each milestone.
+- **Trigger:** Any NORI.Core class exceeds ~100 lines or has more than 2 layers of abstraction before first CLI command ships.
+- **Owner:** Vit
+- **Status:** Monitoring
+- **Last Reviewed:** 2026-02-17
+
+---
+
+### Documentation Drift (C# ↔ Markdown Schema)
+
+- **Risk:** NORI.Core domain model diverges from the markdown schema defined in governance docs. C# types may add/change fields that aren't reflected in PROJECT_INDEX.md schema or template files.
+- **Likelihood:** M
+- **Impact:** H
+- **Priority:** H
+- **Mitigation:** Every C# domain type change must be cross-checked against the markdown schema. Include schema alignment as a checklist item in any Build session. Run /project validate after structural changes.
+- **Trigger:** A C# property exists that has no corresponding field in the markdown registry or vice versa.
+- **Owner:** Vit
+- **Status:** Monitoring
+- **Last Reviewed:** 2026-02-17
+
+---
+
+### Scope Creep into NORI.CLI Too Early
+
+- **Risk:** Starting CLI development before NORI.Core is stable. CLI work introduces UI/UX concerns that distract from core library correctness.
+- **Likelihood:** M
+- **Impact:** M
+- **Priority:** M
+- **Mitigation:** Enforce milestone gate — NORI.CLI work does not start until ProjectRegistry reader and ValidationEngine have passing unit tests.
+- **Trigger:** Any NORI.CLI code is written before first NORI.Core tests pass.
+- **Owner:** Vit
+- **Status:** Monitoring
+- **Last Reviewed:** 2026-02-17
+
+---
+
+### Windows Path Coupling
+
+- **Risk:** NORI.Core hardcodes or assumes Windows-style paths (backslash, drive letters), making it brittle if ever used on another platform or if root path changes.
+- **Likelihood:** L
+- **Impact:** M
+- **Priority:** L
+- **Mitigation:** Use `Path.Combine()` and `Path.GetFullPath()` throughout. Accept root path as a constructor/config parameter — never hardcode `E:\MyProjects\Nori`.
+- **Trigger:** Any hardcoded path string in NORI.Core source code.
+- **Owner:** Vit
+- **Status:** Monitoring
+- **Last Reviewed:** 2026-02-17
+
+---
 
 ---
 
@@ -50,7 +104,10 @@ _None_
 
 | Risk | Likelihood | Impact | Priority | Status |
 |---|---|---|---|---|
-| _Example risk_ | M | H | H | Monitoring |
+| Over-Engineering the C# Layer | M | H | H | Monitoring |
+| Documentation Drift (C# ↔ Markdown Schema) | M | H | H | Monitoring |
+| Scope Creep into NORI.CLI Too Early | M | M | M | Monitoring |
+| Windows Path Coupling | L | M | L | Monitoring |
 
 ---
 

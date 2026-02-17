@@ -4,7 +4,7 @@ This registry captures emerging ideas, tracks their evolution, and records promo
 
 **Purpose:** Lightweight idea capture → structured promotion → project instantiation
 
-**Last Updated:** 2026-02-14
+**Last Updated:** 2026-02-17
 
 ---
 
@@ -21,6 +21,9 @@ _Ideas awaiting evaluation or promotion_
 - **First Tiny Step (<30m):** [Single, concrete action to start]
 - **Promotion Criteria:** [Conditions that would elevate this to a project]
 - **Notes:** [Optional context, links, or considerations]
+- **Status:** Inbox
+- **Last Reviewed:** YYYY-MM-DD
+- **Tags:** [Optional: comma-separated tags e.g., "UI, infrastructure, tooling"]
 
 ---
 
@@ -65,8 +68,6 @@ _Ideas that were explored but not pursued (preserved for learning)_
 - **Notes:** Low priority for now, but captures the idea for future consideration
 - **Archived:** 2026-02-14
 - **Archive Reason:** User-initiated archive - idea no longer actively pursued
-
----
 
 ---
 

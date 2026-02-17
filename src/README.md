@@ -6,13 +6,13 @@ This directory contains the source code for NORI Project OS itself.
 
 Unlike `projects/` which contains project metadata and management files, this `src/` directory contains:
 
-- **NORI.Core**: C# class library providing core NORI functionality
-  - Project registry management
-  - Validation engine
+- **NORI.Core**: C# class library providing core NORI functionality ✅ Scaffold created 2026-02-17
+  - Domain model (NoriProject, ProjectRegistry, ValidationResult) — in progress
+  - Project registry reader (parses PROJECT_INDEX.md)
+  - Validation engine (mirrors `/project validate`)
   - File system operations
-  - Schema definitions
 
-- **NORI.CLI**: Command-line interface tools (future)
+- **NORI.CLI**: Command-line interface tools (future — starts after NORI.Core tests pass)
   - Project creation utilities
   - Migration tools
   - Validation runners
@@ -21,13 +21,14 @@ Unlike `projects/` which contains project metadata and management files, this `s
 
 ```
 src/
-├── NORI.Core/           # Core C# library
-│   ├── NORI.Core.sln
+├── NORI.Core/           # Core C# library  ✅ created 2026-02-17
+│   ├── NORI.Core.slnx   # .NET 10 solution format (replaces .sln)
 │   ├── NORI.Core/
-│   │   └── NORI.Core.csproj
+│   │   └── NORI.Core.csproj   (net10.0 classlib)
 │   └── NORI.Core.Tests/
-│       └── NORI.Core.Tests.csproj
-├── NORI.CLI/            # CLI tools (future)
+│       └── NORI.Core.Tests.csproj  (net10.0 xunit)
+├── NORI.CLI/            # CLI tools (future — after Core tests pass)
+├── .gitignore           # Excludes bin/, obj/, .vs/, TestResults/
 └── README.md            # This file
 ```
 
@@ -56,6 +57,7 @@ See `src/.gitignore` for complete list.
 
 ---
 
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Created:** 2026-02-15
+**Last Updated:** 2026-02-17
 **Purpose:** NORI system source code

@@ -2,8 +2,8 @@
 
 This prompt defines the behavior of the NORI Project Service command system.
 
-**Version:** v0.1.0
-**Last Updated:** 2026-02-13
+**Version:** v0.2.0
+**Last Updated:** 2026-02-17
 
 ---
 
@@ -260,6 +260,9 @@ What would you like to do?
      - **First Tiny Step (<30m):** [User input]
      - **Promotion Criteria:** [User input]
      - **Notes:** [Optional]
+     - **Status:** Inbox
+     - **Last Reviewed:** YYYY-MM-DD (set to today)
+     - **Tags:** [Optional]
 
      ---
      ```
@@ -302,12 +305,14 @@ What would you like to do?
 - Launch `/project new` workflow (prefilled)
 - Move idea from Inbox → Promoted section
 - Add project slug and promotion date
+- **Update statistics:** decrement Active Inbox count, increment Promoted count, update Last Counted date to today
 - Log promotion
 
 **If archiving idea:**
 - Ask for archive reason
 - Move idea from Inbox → Archived section
 - Add archive date and reason
+- **Update statistics:** decrement Active Inbox count, increment Archived count, update Last Counted date to today
 - Log archive action
 
 ---
@@ -348,7 +353,19 @@ What would you like to do?
 5. **User selects:**
    - Run `/project open <slug>` for selected project
 
-6. **Log check-in:**
+6. **Idea Inbox Staleness Check:**
+   - Read `BIG_IDEAS.md` Inbox section
+   - If any inbox idea has a `Last Reviewed` date older than 7 days, or no `Last Reviewed` date:
+     - Display after project recommendations:
+       ```
+       💡 Inbox reminder: [N] idea(s) not reviewed in 7+ days.
+          - [Idea Title] (last reviewed: [date or "never"])
+       ```
+     - Ask: "Would you like to review inbox ideas now? (y/n)"
+     - If yes, run `/project idea list`
+   - If inbox is empty or all ideas reviewed recently, skip this step silently
+
+7. **Log check-in:**
    - File: `globaldocs\logs\YYYY-MM-DD_projects-session.md`
    - Record energy/focus levels
    - Record project selection
@@ -675,7 +692,7 @@ Typical session:
 
 ## Version
 
-**PROJECT_SERVICE_PROMPT Version:** v0.1.0
+**PROJECT_SERVICE_PROMPT Version:** v0.2.0
 
 This prompt is subject to NORI versioning governance.
 

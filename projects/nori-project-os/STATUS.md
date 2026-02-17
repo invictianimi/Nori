@@ -1,28 +1,28 @@
 # Status: NORI Project OS
 
-**Last Updated:** 2026-02-13
+**Last Updated:** 2026-02-17
 
 ---
 
 ## Current Phase
 
-Planning
+Build
 
 ---
 
 ## Top 3 Priorities
 
-1. Test all `/Projects` commands interactively to verify functionality
-2. Initialize git repository at NORI root for version control
-3. Begin using NORI for daily project management (dogfooding)
+1. Define NORI.Core domain model — create NoriProject.cs, ProjectRegistry.cs, ValidationResult.cs
+2. Implement ProjectRegistry reader — parse PROJECT_INDEX.md from C# into typed domain objects
+3. Capture friction points from daily dogfooding and log as decisions
 
 ---
 
 ## Next Action (<30m)
 
-Begin using NORI daily (run `/Projects daily` each morning)
+Define NORI.Core domain model: replace `Class1.cs` with `NoriProject.cs`, `ProjectRegistry.cs`, `ValidationResult.cs`
 
-**Why this matters:** Real-world usage will validate workflows, identify friction points, and build muscle memory with the command system.
+**Why this matters:** Domain model types are the foundation for all NORI.Core functionality. Once defined, every subsequent task (registry reader, validation engine, CLI) has concrete types to build against.
 
 ---
 
@@ -43,7 +43,7 @@ _None_
 - **2:** Slow progress, significant challenges
 - **1:** Stalled or minimal progress
 
-**Current Momentum:** 5 - Bootstrap complete! System validated and operational. Ready for daily use.
+**Current Momentum:** 5 - Governance system v0.2.0 operational. Build phase entered. C# scaffold created and building clean. Domain model is next.
 
 ---
 
@@ -82,14 +82,24 @@ L
 ✅ Confirmed all 4 projects properly scaffolded and compliant
 ✅ Archive-not-delete policy validated through test project
 
+### Governance Iteration (2026-02-17)
+✅ Big Ideas framework gaps identified and resolved (v0.2.0)
+✅ Added Status, Last Reviewed, Tags fields to idea template
+✅ Fixed stats drift risk in promote/archive flows
+✅ Added staleness check to /project daily
+✅ NORI.Core scaffold created (src/NORI.Core/)
+✅ Phase advanced: Planning → Build
+
 ---
 
 ## Upcoming Milestones
 
-- Complete bootstrap validation
-- Achieve "OK" system health status
-- Document any issues found during validation
-- Close bootstrap session with complete logs
+- ✅ NORI.Core C# scaffold created (sln + classlib + xunit, builds clean)
+- Define core domain model (NoriProject, ProjectRegistry, ValidationResult)
+- Implement ProjectRegistry reader — parse PROJECT_INDEX.md into typed objects
+- Implement ValidationEngine — mirrors `/project validate` logic in C#
+- First passing unit tests for registry parsing and validation
+- NORI.CLI first command — read-only `nori list` using NORI.Core
 
 ---
 
@@ -97,7 +107,7 @@ L
 
 This is NORI managing itself (dogfooding approach). Bootstrap initialization is 100% complete. System validated with OK status.
 
-**Current Focus:** Priority #3 - Begin daily NORI usage (dogfooding). Command testing 100% complete (10/10). Git already configured and operational. System ready for production use.
+**Current Focus:** Build phase — NORI.Core C# library. Governance system (markdown + AI) is operational at v0.2.0 and iterating. C# development track starts now with scaffold creation. Dogfooding continues in parallel.
 
 ---
 

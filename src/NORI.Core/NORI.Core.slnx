@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="NORI.Core.Tests/NORI.Core.Tests.csproj" />
+  <Project Path="NORI.Core/NORI.Core.csproj" />
+</Solution>

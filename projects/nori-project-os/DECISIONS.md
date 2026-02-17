@@ -24,6 +24,24 @@ This log captures key decisions made throughout the project lifecycle.
 
 -->
 
+### Big Ideas Framework Improvements (v0.2.0)
+
+- **Date:** 2026-02-17
+- **Decision:** Address gaps in Big Ideas framework identified during review
+- **Rationale:** Framework review revealed four issues: (1) stats not explicitly updated in promote/archive command flows, causing drift risk; (2) no "Last Reviewed" date on inbox ideas, allowing staleness without detection; (3) no review cadence — ideas can accumulate unreviewed; (4) no tagging or status field on ideas.
+- **Owner:** Vit
+- **Impact:** MINOR version bump (v0.1.0 → v0.2.0). Three files updated:
+  - `BIG_IDEAS.md` — three optional fields added to idea template: `Status`, `Last Reviewed`, `Tags`
+  - `PROJECT_SERVICE_PROMPT.md` — stats update step added to promote and archive flows; idea staleness check added to `/project daily`
+  - `VERSIONING.md` — version history entry added
+- **Category:** Process / Governance
+- **Alternatives Considered:**
+  - Add "Under Review" as a separate BIG_IDEAS.md section (rejected — overengineered for current scale; Status field on the template achieves same result with less friction)
+  - Enforce stats via code/automation (rejected — not applicable in markdown-first system; explicit steps in command definitions is the right approach)
+- **Links:** `globaldocs/registry/BIG_IDEAS.md`, `globaldocs/templates/prompts/PROJECT_SERVICE_PROMPT.md`
+
+---
+
 ### Git Session Discipline (Mandatory End-of-Session Checks)
 
 - **Date:** 2026-02-13
