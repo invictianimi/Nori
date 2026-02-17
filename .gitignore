@@ -1,8 +1,9 @@
 # NORI Project OS - Root .gitignore
 
 # Managed projects (have their own git repos)
-# NOTE: Nested repos in projects/ are preserved, not ignored
-# Git handles these as separate repositories
+# NOTE: Projects with nested git repos are ignored to prevent conflicts
+projects/certification-center/
+projects/*/WebSite-Overhaul/
 
 # IDE and system files
 .DS_Store
