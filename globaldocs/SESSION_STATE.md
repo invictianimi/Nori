@@ -10,26 +10,26 @@ It is updated at the end of every NORI session.
 2026-02-17
 
 ## Active Project:
-nori-project-os
+certification-center
 
 ## Last Command Executed:
-Build phase transition — NORI.Core C# scaffold created
+/project end-session
 
 ## Pending Next Action:
-Define NORI.Core domain model: replace Class1.cs with NoriProject.cs, ProjectRegistry.cs, ValidationResult.cs
+Session 2.1 — Homepage Hero (WebSite-Overhaul/)
 
 ## System Health:
 OK
 
 ## Last Log File:
-projects/nori-project-os/logs/2026-02-17_build-phase-transition.md
+projects/certification-center/logs/2026-02-17_status-sync.md
 
 ## Notes:
 - ✅ Big Ideas framework gaps resolved (v0.2.0)
-- ✅ NORI-Project-OS advanced to Build phase (was Planning)
-- ✅ RISKS.md populated with 4 Build phase risks (2 High, 1 Medium, 1 Low)
-- ✅ NORI.Core C# scaffold created and builds clean (.NET 10, net10.0)
-- ✅ STATUS.md and PROJECT_INDEX.md updated to reflect Build phase
-- ✅ /project validate run — all OK
-- Uncommitted changes exist — git commit + push required at session end
-- Previous session context (certification-center Week 2) preserved in git history
+- ✅ NORI-Project-OS advanced to Build phase, NORI.Core C# scaffold builds clean
+- ✅ certification-center synced to Build phase (STATUS.md, PROJECT.md, registry updated)
+- ✅ /project end-session command added (SKILL.md v1.7.0)
+- ✅ Pre-session health check added to /project open (SKILL.md v1.8.0)
+- ✅ Session closure checklists added to SESSION_LOG_TEMPLATE.md
+- ✅ NORI_GIT_WORKFLOW.md updated to v1.3.0
+- Pending: apply v0.1.0-week1-complete tag to WebSite-Overhaul repo

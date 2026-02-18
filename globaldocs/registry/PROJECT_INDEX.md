@@ -2,7 +2,7 @@
 
 This is the canonical registry of all projects under NORI Project OS.
 
-**Last Updated:** 2026-02-17
+**Last Updated:** 2026-02-17 (certification-center synced to Build phase)
 
 ---
 
@@ -27,7 +27,7 @@ This is the canonical registry of all projects under NORI Project OS.
 
 | Project | Slug | State | Phase | Project Type | Last Touched | Next Action (<30m) | Cognitive Load (S/M/L) | AI Autonomy (0–3) | AI Enabled (Y/N) |
 |---|---|---|---|---|---|---|---|---|---|
-| Certification Center | certification-center | active | Discovery | TypeScript | 2026-02-13 | Create .code-workspace file | M | 1 | Y |
+| Certification Center | certification-center | active | Build | TypeScript | 2026-02-17 | Session 2.1 — Homepage Hero | M | 1 | Y |
 | KinderGuard | kinderguard | active | Discovery | Documentation | 2026-02-13 | Review Home_IGA_Report.docx | M | 1 | Y |
 | NORI Project OS | nori-project-os | active | Build | Mixed | 2026-02-17 | Define NORI.Core domain model (NoriProject, ProjectRegistry, ValidationResult) | L | 2 | Y |
 ---

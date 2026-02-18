@@ -105,3 +105,43 @@ No issues requiring remediation.
 
 Session changes from today (v0.2.0 framework improvements) are uncommitted.
 Run git commit + push per End-of-Session Protocol before closing.
+
+---
+
+# Re-Validation — 2026-02-17 (certification-center session)
+
+**Triggered by:** `validate project` during certification-center open session
+
+## Result: ⚠️ Warning
+
+### Registry Integrity: ✅ OK
+- No duplicate slugs
+- All 3 active project folders confirmed (certification-center, kinderguard, nori-project-os)
+- Archived projects confirmed in _archive/ (atas, nori-testing-playground)
+
+### Structure Compliance: ✅ OK
+
+| Project | PROJECT.md | STATUS.md | DECISIONS.md | RISKS.md | README_NORI.md |
+|---|---|---|---|---|---|
+| certification-center | ✅ | ✅ | ✅ | ✅ | ✅ |
+| kinderguard | ✅ | ✅ | ✅ | ✅ | ✅ |
+| nori-project-os | ✅ | ✅ | ✅ | ✅ | ✅ |
+
+Templates: ✅ OK (project_scaffold, vs_solutions, vs_workspaces, prompts all present)
+
+### Documentation Drift: ⚠️ Warning
+
+**Issue:** `certification-center` registry Next Action is stale.
+- Registry value: "Create .code-workspace file"
+- Actual state: `Certification-Center.code-workspace` already exists
+- STATUS.md Next Action: "Review WebSite-Overhaul/ folder structure and create initial inventory of existing files"
+- Fix: Update PROJECT_INDEX.md next action for certification-center
+
+### Governance: ⚠️ Warning
+
+- SESSION_STATE.md: ✅ exists
+- Logs directory: ✅ OK (7 log files)
+- Archive-only policy: ✅ maintained
+- **Pending:** Uncommitted git changes from previous session still outstanding
+
+### Overall: ⚠️ Warning — 1 stale registry field, 1 pending git commit

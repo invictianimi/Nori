@@ -75,12 +75,18 @@ git push origin master
 
 ### Checklist for Session Closure
 
+**Recommended:** Run `/project end-session` — this command automates all steps below.
+
 - [ ] All work completed (archives, updates, logs created)
 - [ ] SESSION_STATE.md updated with final state
 - [ ] All changes staged (`git add .`)
 - [ ] Commit created with descriptive message
 - [ ] Working tree is clean (`git status` shows nothing to commit)
 - [ ] Push to remote (optional, based on workflow)
+
+**For TypeScript/Python projects with nested repos (e.g., WebSite-Overhaul):**
+- [ ] Nested repo committed first (with PROGRESS.md updated)
+- [ ] NORI repo committed after (SESSION_STATE.md reflects nested repo state)
 
 ### Quick Verification
 
@@ -290,6 +296,6 @@ When archiving a project with source code:
 
 ---
 
-**Version:** 1.2.0 (Extended for Source Code)
-**Last Updated:** 2026-02-15
+**Version:** 1.3.0 (End-of-session enforcement)
+**Last Updated:** 2026-02-17
 **Status:** Active Reference - MANDATORY COMPLIANCE
