@@ -132,10 +132,23 @@ artifacts\
 
 ---
 
-## 3.4 Project Service Router
+## 3.4 Command Structure
 
-Location:
-globaldocs/templates/prompts/PROJECT_SERVICE_PROMPT.md
+NORI uses a two-skill command structure: `/nori` for system-level operations and `/project` for project-level operations.
+
+### /nori skill (system level)
+
+Location: `~/.claude/skills/nori/SKILL.md`
+
+Supported commands:
+
+/nori start             — Initialize NORI session (load context, health check, git sync check)
+/nori start --strict    — Same, enforcing BOOTSTRAP.md as session governance
+/nori shutdown          — Clean NORI shutdown (check open projects, commit, push)
+
+### /project skill (project level)
+
+Location: `~/.claude/skills/project/SKILL.md`
 
 This file defines all `/project` command behavior.
 
@@ -145,6 +158,7 @@ Supported commands:
 /project new
 /project list
 /project open <slug>
+/project end-session
 /project idea add
 /project idea list
 /project daily
@@ -155,6 +169,26 @@ Router must:
 - Always read PROJECT_INDEX.md first
 - Always log actions
 - Always update registry minimally
+
+### Session Lifecycle
+
+/nori start            → load NORI context, check health, ask what to do
+/project open <slug>   → open project (sets Project Session: open in SESSION_STATE.md)
+/project end-session   → close project (commits both repos, sets Project Session: closed)
+/project open <slug>   → (optional) open another project and continue
+/nori shutdown         → final NORI shutdown (checks Project Session, commits NORI repo, pushes)
+
+### SESSION_STATE.md Fields
+
+Required fields:
+- Last Session Date
+- Active Project
+- Project Session (open/closed)
+- Last Command Executed
+- Pending Next Action
+- System Health
+- Last Log File
+- Notes
 
 ---
 

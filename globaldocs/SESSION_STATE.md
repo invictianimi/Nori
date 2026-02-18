@@ -12,8 +12,11 @@ It is updated at the end of every NORI session.
 ## Active Project:
 certification-center
 
+## Project Session:
+closed
+
 ## Last Command Executed:
-/project end-session
+/nori shutdown
 
 ## Pending Next Action:
 Session 2.1 — Homepage Hero (WebSite-Overhaul/)
@@ -32,4 +35,6 @@ projects/certification-center/logs/2026-02-17_status-sync.md
 - ✅ Pre-session health check added to /project open (SKILL.md v1.8.0)
 - ✅ Session closure checklists added to SESSION_LOG_TEMPLATE.md
 - ✅ NORI_GIT_WORKFLOW.md updated to v1.3.0
+- ✅ Command restructure: /nori start, /project end-session, /nori shutdown (2026-02-17)
+- ✅ Project Session field added to SESSION_STATE.md
 - Pending: apply v0.1.0-week1-complete tag to WebSite-Overhaul repo
